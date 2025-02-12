@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdMob WebView Ad</title>
-</head>
-<body style="text-align:center;">
-
-    <h2>AdMob Banner Ad</h2>
-
-    <!-- Replace with your actual AdMob Ad Unit ID -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+    <h2>AdMob WebView Ads</h2>
+
+    <!-- Banner Ad -->
     <ins class="adsbygoogle"
          style="display:block"
-         data-ad-client="ca-pub-3940256099942544" 
+         data-ad-client="ca-pub-3940256099942544"
          data-ad-slot="2007873177"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+         data-ad-format="auto"></ins>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+
+    <!-- Interstitial Ad -->
+    <script>
+        function showInterstitial() {
+            var interstitial = document.createElement("iframe");
+            interstitial.src = "https://googleads.g.doubleclick.net/pagead/html/interstitial.html";
+            interstitial.style.position = "fixed";
+            interstitial.style.top = "0";
+            interstitial.style.left = "0";
+            interstitial.style.width = "100%";
+            interstitial.style.height = "100%";
+            interstitial.style.border = "none";
+            interstitial.style.zIndex = "9999";
+            document.body.appendChild(interstitial);
+        }
+    </script>
+    <button onclick="showInterstitial()">Show Interstitial Ad</button>
+
+    <!-- Rewarded Ad -->
+    <script>
+        function showRewardedAd() {
+            var rewardedAd = document.createElement("iframe");
+            rewardedAd.src = "https://googleads.g.doubleclick.net/pagead/html/rewarded.html";
+            rewardedAd.style.position = "fixed";
+            rewardedAd.style.top = "0";
+            rewardedAd.style.left = "0";
+            rewardedAd.style.width = "100%";
+            rewardedAd.style.height = "100%";
+            rewardedAd.style.border = "none";
+            rewardedAd.style.zIndex = "9999";
+            document.body.appendChild(rewardedAd);
+        }
+    </script>
+    <button onclick="showRewardedAd()">Show Rewarded Ad</button>
 
 </body>
 </html>
